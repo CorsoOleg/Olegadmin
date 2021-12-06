@@ -43,8 +43,6 @@ const MyApp = () => {
     
             <div className="card">
               <div className="card-body p-5">
-    
-                
                 <AddTask />
                 <ul className="nav nav-tabs mb-4 pb-2" id="ex1" role="tablist">
                   <li className="nav-item" role="presentation" onClick={() => setTab('all')}>
@@ -72,7 +70,6 @@ const MyApp = () => {
     
               </div>
             </div>
-    
           </div>
         </div>
       </div>
