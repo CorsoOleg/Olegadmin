@@ -1,7 +1,10 @@
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+console.log(path.join(__dirname, 'build') )
+
 module.exports = { 
-	entry: __dirname + '//src//evgen.js', 
-	mode: 'production', 
-	watch: false, 
+	entry: __dirname + '/src/index.js',
 	module: { 
 		rules: [ 
 				{ 
@@ -12,7 +15,8 @@ module.exports = {
 			]
 	},
 	output: { 
-		filename: 'transformed.js', 
-		path: __dirname + '/build' 
-	}
+		filename: 'bundle.[hash].js', 
+		path: path.join(__dirname, 'build') 
+	},
+	plugins: [new HtmlWebpackPlugin({ template: path.join(__dirname, 'index.html') })],
 };
